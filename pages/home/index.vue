@@ -3,7 +3,7 @@
     <div class="banner">
       <div class="container">
         <h1 class="logo-font">真实的世界</h1>
-        <p>A place to share your knowledge.</p>
+        <p>nuxtJs</p>
       </div>
     </div>
 
