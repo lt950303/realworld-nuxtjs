@@ -55,5 +55,9 @@ module.exports = {
     ])
     }
   },
-  plugins: ['~/plugins/request', '~/plugins/dayjs']
+  plugins: ['~/plugins/request', '~/plugins/dayjs'],
+  server: {
+    host: '0.0.0.0',
+    prot: 3000
+  }
 }
