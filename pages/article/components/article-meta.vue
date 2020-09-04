@@ -12,6 +12,7 @@
       :class="{
         active: article.author.following
       }"
+      @click="follow(article)"
     >
       <i class="ion-plus-round"></i>
       &nbsp;
@@ -34,12 +35,26 @@
 </template>
 
 <script>
+import { followUser, unFollowUser } from '@/api/user'
+
 export default {
   name: 'ArticleMeta',
   props: {
     article: {
       type: Object,
       required: true
+    }
+  },
+  methods:{
+    async follow(article) {
+      if(article.author.following){
+        await unFollowUser(article.author.username)
+        article.author.following = false
+      }else{
+        await followUser(article.author.username)
+        article.author.following = true
+      }
+      
     }
   }
 };

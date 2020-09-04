@@ -35,6 +35,7 @@ export const deleteFavorite = (slug) => {
   })
 }
 
+// 获取文章详情
 export const getArticle = (slug) => {
   return request({
     method: 'GET',
@@ -42,14 +43,20 @@ export const getArticle = (slug) => {
   })
 }
 
-deleteFavorite
-
-
 // 获取文章评论
 export const getArticleComments = (slug) => {
   return request({
     method: 'GET',
     url: `/api/articles/${slug}/comments`
+  })
+}
+
+// 增加文章评论
+export const addComments = (data) => {
+  return request({
+    method: 'POST',
+    url: `/api/articles/${data.slug}/comments`,
+    data: data.body
   })
 }
 

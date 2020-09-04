@@ -23,11 +23,11 @@
         <div class="col-xs-12 col-md-8 offset-md-2">
           <form class="card comment-form">
             <div class="card-block">
-              <textarea class="form-control" placeholder="Write a comment..." rows="3"></textarea>
+              <textarea v-model="comment" class="form-control" placeholder="Write a comment..." rows="3"></textarea>
             </div>
             <div class="card-footer">
               <img src="http://i.imgur.com/Qr71crq.jpg" class="comment-author-img" />
-              <button class="btn btn-sm btn-primary">Post Comment</button>
+              <button class="btn btn-sm btn-primary" @click="postComments">Post Comment</button>
             </div>
           </form>
 
@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import { getArticle } from '@/api/article'
+import { getArticle, addComments } from '@/api/article'
 import MarkdownIt from 'markdown-it'
 import ArticleMeta from './components/article-meta'
 import ArticleComments from './components/article-comments'
@@ -51,6 +51,11 @@ export default {
   components: {
     ArticleMeta,
     ArticleComments
+  },
+  data() {
+    return {
+      comment: ''
+    }
   },
   async asyncData({ params }){
     const { data } = await getArticle(params.slug)
@@ -73,7 +78,19 @@ export default {
           }
         ]
       }
+  },
+  methods: {
+    async postComments(){
+      await addComments({
+        slug: this.article.slug,
+        body: {comment:{
+          body: this.comment
+        }}
+      })
+      this.comment = ''
+      // 更新评论
     }
+  }
 };
 </script>
 

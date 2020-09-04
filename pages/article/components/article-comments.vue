@@ -4,7 +4,8 @@
               <div class="card-block">
                 <p
                   class="card-text"
-                >{{commont.body}}</p>
+                  v-html="commont.body"
+                ></p>
               </div>
               <div class="card-footer">
                 <nuxt-link :to="{
@@ -29,6 +30,7 @@
 
 <script>
 import { getArticleComments } from '@/api/article'
+import MarkdownIt from 'markdown-it'
 
 export default {
   name: 'ArticleComments',
@@ -45,8 +47,15 @@ export default {
   },
   async mounted(){
     const { data } =  await getArticleComments(this.article.slug)
+    const md = new MarkdownIt()
+    data.comments.forEach(comment => {
+      comment.body =  md.render(comment.body)
+    })
     this.comments = data.comments
     // console.log(data);
+  },
+  methods: {
+    
   }
 }
 </script>
