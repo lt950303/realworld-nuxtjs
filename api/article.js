@@ -61,3 +61,29 @@ export const addComments = (data) => {
 }
 
 
+// 新增文章
+export const addArticle = (data) => {
+  return request({
+    method: 'POST',
+    url: `/api/articles`,
+    data: data
+  })
+}
+
+export const updateArticle = (data) => {
+  return request({
+    method: 'PUT',
+    url: `/api/articles/${data.slug}`,
+    data: data.body
+  })
+}
+
+
+export const deleteArticle = (slug) => {
+  return request({
+    method: 'DELETE',
+    url: `/api/articles/${slug}`,
+  })
+}
+
+

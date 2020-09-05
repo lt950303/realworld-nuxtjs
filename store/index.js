@@ -30,5 +30,5 @@ export const actions = {
       }
     }
     commit('setUser', auth)
-  }
+  },
 }

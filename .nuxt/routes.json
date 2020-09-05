@@ -1,51 +1,57 @@
 [
   {
     "path": "/",
-    "component": "E:\\\\realworld\\\\realworld-nuxtjs\\\\pages\\\\layout",
+    "component": "D:\\\\fe-code\\\\3-3\\\\realworld-nuxtjs\\\\pages\\\\layout",
     "children": [
       {
         "path": "",
         "name": "home",
-        "component": "E:\\\\realworld\\\\realworld-nuxtjs\\\\pages\\\\home",
-        "_name": "_3b55ed15"
+        "component": "D:\\\\fe-code\\\\3-3\\\\realworld-nuxtjs\\\\pages\\\\home",
+        "_name": "_1af836d8"
       },
       {
         "path": "/login",
         "name": "login",
-        "component": "E:\\\\realworld\\\\realworld-nuxtjs\\\\pages\\\\login",
-        "_name": "_2f9ffdf3"
+        "component": "D:\\\\fe-code\\\\3-3\\\\realworld-nuxtjs\\\\pages\\\\login",
+        "_name": "_5e30f654"
       },
       {
         "path": "/register",
         "name": "register",
-        "component": "E:\\\\realworld\\\\realworld-nuxtjs\\\\pages\\\\login",
-        "_name": "_2f9ffdf3"
+        "component": "D:\\\\fe-code\\\\3-3\\\\realworld-nuxtjs\\\\pages\\\\login",
+        "_name": "_5e30f654"
       },
       {
         "path": "profile/:username",
         "name": "profile",
-        "component": "E:\\\\realworld\\\\realworld-nuxtjs\\\\pages\\\\profile",
-        "_name": "_be81c49a"
+        "component": "D:\\\\fe-code\\\\3-3\\\\realworld-nuxtjs\\\\pages\\\\profile",
+        "_name": "_6ef381d4"
       },
       {
         "path": "/settings",
         "name": "settings",
-        "component": "E:\\\\realworld\\\\realworld-nuxtjs\\\\pages\\\\settings",
-        "_name": "_0864a959"
+        "component": "D:\\\\fe-code\\\\3-3\\\\realworld-nuxtjs\\\\pages\\\\settings",
+        "_name": "_00bcc958"
       },
       {
         "path": "/editor",
         "name": "editor",
-        "component": "E:\\\\realworld\\\\realworld-nuxtjs\\\\pages\\\\editor",
-        "_name": "_905837ba"
+        "component": "D:\\\\fe-code\\\\3-3\\\\realworld-nuxtjs\\\\pages\\\\editor",
+        "_name": "_5b61f7e2"
+      },
+      {
+        "path": "/editor/:slug",
+        "name": "editor",
+        "component": "D:\\\\fe-code\\\\3-3\\\\realworld-nuxtjs\\\\pages\\\\editor",
+        "_name": "_5b61f7e2"
       },
       {
         "path": "/article/:slug",
         "name": "article",
-        "component": "E:\\\\realworld\\\\realworld-nuxtjs\\\\pages\\\\article",
-        "_name": "_f0ed3e00"
+        "component": "D:\\\\fe-code\\\\3-3\\\\realworld-nuxtjs\\\\pages\\\\article",
+        "_name": "_55bdc521"
       }
     ],
-    "_name": "_78ba8440"
+    "_name": "_6730d19f"
   }
 ]

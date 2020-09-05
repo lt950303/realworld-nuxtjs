@@ -3,6 +3,8 @@
     <div class="banner">
       <div class="container">
         <h1>{{article.title}}</h1>
+        <h3>&nbsp;</h3>
+        <h3>{{article.description}}</h3>
 
         <article-meta :article="article"/>
       </div>
@@ -26,7 +28,7 @@
               <textarea v-model="comment" class="form-control" placeholder="Write a comment..." rows="3"></textarea>
             </div>
             <div class="card-footer">
-              <img src="http://i.imgur.com/Qr71crq.jpg" class="comment-author-img" />
+              <img style="width: 40px; height: 40px;" :src="article.author.image" />
               <button class="btn btn-sm btn-primary" @click="postComments">Post Comment</button>
             </div>
           </form>

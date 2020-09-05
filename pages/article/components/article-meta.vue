@@ -1,7 +1,7 @@
 <template>
   <div class="article-meta">
     <a href>
-      <img src="http://i.imgur.com/Qr71crq.jpg" />
+      <img :src="article.author.image" />
     </a>
     <div class="info">
       <a href class="author">{{article.author.username}}</a>
